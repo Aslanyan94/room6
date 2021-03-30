@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     "accounts",
+    "blog"
 ]
 
 MIDDLEWARE = [
@@ -52,6 +53,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'pr_name.urls'
+MEDIA_DIR = os.path.join(BASE_DIR, 'media')
 
 TEMPLATES = [
     {
@@ -119,4 +121,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+MEDIA_ROOT = MEDIA_DIR
+MEDIA_URL = '/media/'
 STATIC_URL = '/static/'

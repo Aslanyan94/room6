@@ -14,3 +14,14 @@ def accounts(request):
     # user.save(commit=True)
     # return HttpResponse("hello")
     return render(request, "accounts.html", context={"name": "Basic"})
+
+
+def register(request, user_id):
+    data = request.body
+    username = data["username"]
+    password = data["password"]
+    user = User.objects.create_user(username=username)
+
+
+
+# admin --> fadfhwoqpehglhgalh123rewr42dsav
